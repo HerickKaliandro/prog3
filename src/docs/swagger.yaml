@@ -27,7 +27,43 @@
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucesso!",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "total": {
+                  "type": "number",
+                  "example": 1
+                },
+                "Usuario": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "usuario": {
+                        "type": "string",
+                        "example": "Amanda"
+                      },
+                      "senha": {
+                        "type": "string",
+                        "example": "Amanda123"
+                      },
+                      "sexo": {
+                        "type": "string",
+                        "example": "I"
+                      },
+                      "setor": {
+                        "type": "string",
+                        "example": "ADM"
+                      }
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
           },
           "500": {
             "description": "Erro Interno do Servidor"
@@ -117,13 +153,28 @@
             "type": "string"
           },
           {
-            "name": "body",
+            "name": "json",
             "in": "body",
+            "description": "Dados que podem ser passados para atualizar totalmente um Usuario na resposta",
+            "required": true,
             "schema": {
               "type": "object",
               "properties": {
-                "id": {
-                  "example": "any"
+                "usuario": {
+                  "type": "string",
+                  "example": "Amanda"
+                },
+                "senha": {
+                  "type": "string",
+                  "example": "Amanda123"
+                },
+                "sexo": {
+                  "type": "string",
+                  "example": "I"
+                },
+                "setor": {
+                  "type": "string",
+                  "example": "ADM"
                 }
               }
             }
@@ -184,7 +235,51 @@
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucesso!",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "total": {
+                  "type": "number",
+                  "example": 1
+                },
+                "Produto": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number",
+                        "example": 1
+                      },
+                      "descricao": {
+                        "type": "string",
+                        "example": "Cabeceira"
+                      },
+                      "cor": {
+                        "type": "string",
+                        "example": "Verde"
+                      },
+                      "largura": {
+                        "type": "number",
+                        "example": 12
+                      },
+                      "altura": {
+                        "type": "number",
+                        "example": 89
+                      },
+                      "comprimento": {
+                        "type": "number",
+                        "example": 122
+                      }
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
           },
           "500": {
             "description": "Erro Interno do Servidor"
@@ -278,13 +373,32 @@
             "type": "string"
           },
           {
-            "name": "body",
+            "name": "json",
             "in": "body",
+            "description": "Dados que podem ser passados para atualizar totalmente um Produto na resposta",
+            "required": true,
             "schema": {
               "type": "object",
               "properties": {
-                "id": {
-                  "example": "any"
+                "descricao": {
+                  "type": "string",
+                  "example": "Cabeceira"
+                },
+                "cor": {
+                  "type": "string",
+                  "example": "Verde"
+                },
+                "largura": {
+                  "type": "number",
+                  "example": 12
+                },
+                "altura": {
+                  "type": "number",
+                  "example": 89
+                },
+                "comprimento": {
+                  "type": "number",
+                  "example": 122
                 }
               }
             }
@@ -345,7 +459,51 @@
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucesso!",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "total": {
+                  "type": "number",
+                  "example": 1
+                },
+                "Franquia": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "idendereco": {
+                        "type": "number",
+                        "example": 1
+                      },
+                      "idcliente": {
+                        "type": "number",
+                        "example": 1
+                      },
+                      "numero": {
+                        "type": "number",
+                        "example": 1
+                      },
+                      "cnpj": {
+                        "type": "string",
+                        "example": "85.071.272/0001-35"
+                      },
+                      "email": {
+                        "type": "string",
+                        "example": "cabeceirasdesol@gmail.com"
+                      },
+                      "fantasia": {
+                        "type": "string",
+                        "example": "Cabeceiras de Sol"
+                      }
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
           },
           "500": {
             "description": "Erro Interno do Servidor"
@@ -443,13 +601,28 @@
             "type": "string"
           },
           {
-            "name": "body",
+            "name": "json",
             "in": "body",
+            "description": "Dados que podem ser passados para atualizar totalmente uma Franquia na resposta",
+            "required": true,
             "schema": {
               "type": "object",
               "properties": {
-                "id": {
-                  "example": "any"
+                "numero": {
+                  "type": "number",
+                  "example": 1
+                },
+                "cnpj": {
+                  "type": "string",
+                  "example": "85.071.272/0001-35"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "cabeceirasdesol@gmail.com"
+                },
+                "fantasia": {
+                  "type": "string",
+                  "example": "Cabeceiras de Sol"
                 }
               }
             }
@@ -510,7 +683,47 @@
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucesso!",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "total": {
+                  "type": "number",
+                  "example": 1
+                },
+                "Nota Saida": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "idestadonota": {
+                        "type": "number",
+                        "example": 1
+                      },
+                      "numeronf": {
+                        "type": "string",
+                        "example": "122983765"
+                      },
+                      "valortotal": {
+                        "type": "number",
+                        "example": 200
+                      },
+                      "dataemisao": {
+                        "type": "string",
+                        "example": "12.02.2022"
+                      },
+                      "idcliente": {
+                        "type": "number",
+                        "example": 1
+                      }
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
           },
           "500": {
             "description": "Erro Interno do Servidor"
@@ -604,13 +817,24 @@
             "type": "string"
           },
           {
-            "name": "body",
+            "name": "json",
             "in": "body",
+            "description": "Dados que podem ser passados para atualizar totalmente uma Nota de Saida na resposta",
+            "required": true,
             "schema": {
               "type": "object",
               "properties": {
-                "id": {
-                  "example": "any"
+                "numeronf": {
+                  "type": "string",
+                  "example": "122983765"
+                },
+                "valortotal": {
+                  "type": "number",
+                  "example": 200
+                },
+                "dataemisao": {
+                  "type": "string",
+                  "example": "12.02.2023"
                 }
               }
             }
@@ -671,7 +895,47 @@
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucesso!",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "total": {
+                  "type": "number",
+                  "example": 1
+                },
+                "Nota Entrada": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "idestadonota": {
+                        "type": "number",
+                        "example": 1
+                      },
+                      "numeronf": {
+                        "type": "string",
+                        "example": "122983765"
+                      },
+                      "valortotal": {
+                        "type": "number",
+                        "example": 200
+                      },
+                      "dataemisao": {
+                        "type": "string",
+                        "example": "12.02.2023"
+                      },
+                      "idfornecedor": {
+                        "type": "number",
+                        "example": 1
+                      }
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
           },
           "500": {
             "description": "Erro Interno do Servidor"
@@ -765,13 +1029,24 @@
             "type": "string"
           },
           {
-            "name": "body",
+            "name": "json",
             "in": "body",
+            "description": "Dados que podem ser passados para atualizar totalmente uma Nota de Entrada na resposta",
+            "required": true,
             "schema": {
               "type": "object",
               "properties": {
-                "id": {
-                  "example": "any"
+                "numeronf": {
+                  "type": "string",
+                  "example": "122983765"
+                },
+                "valortotal": {
+                  "type": "number",
+                  "example": 200
+                },
+                "dataemisao": {
+                  "type": "string",
+                  "example": "12.02.2023"
                 }
               }
             }
@@ -832,7 +1107,51 @@
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucesso!",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "total": {
+                  "type": "number",
+                  "example": 1
+                },
+                "Fornecedor": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "idendereco": {
+                        "type": "number",
+                        "example": 1
+                      },
+                      "idcliente": {
+                        "type": "number",
+                        "example": 1
+                      },
+                      "numero": {
+                        "type": "number",
+                        "example": 1
+                      },
+                      "cnpj": {
+                        "type": "string",
+                        "example": "85.071.272/0001-35"
+                      },
+                      "email": {
+                        "type": "string",
+                        "example": "VendeMoveis@gmail.com"
+                      },
+                      "fantasia": {
+                        "type": "string",
+                        "example": "Vendedor Ambulante"
+                      }
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
           },
           "500": {
             "description": "Erro Interno do Servidor"
@@ -930,13 +1249,28 @@
             "type": "string"
           },
           {
-            "name": "body",
+            "name": "json",
             "in": "body",
+            "description": "Dados que podem ser passados para atualizar totalmente um Fornecedor na resposta",
+            "required": true,
             "schema": {
               "type": "object",
               "properties": {
-                "id": {
-                  "example": "any"
+                "numero": {
+                  "type": "number",
+                  "example": 1
+                },
+                "cnpj": {
+                  "type": "string",
+                  "example": "85.071.272/0001-35"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "VendeMoveis@gmail.com"
+                },
+                "fantasia": {
+                  "type": "string",
+                  "example": "Vendedor Ambulante"
                 }
               }
             }
@@ -997,7 +1331,39 @@
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucesso!",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "total": {
+                  "type": "number",
+                  "example": 1
+                },
+                "Nota Estado": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "numeronota": {
+                        "type": "number",
+                        "example": 12345
+                      },
+                      "estado": {
+                        "type": "string",
+                        "example": "Paraná"
+                      },
+                      "UF": {
+                        "type": "string",
+                        "example": "PR"
+                      }
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
           },
           "500": {
             "description": "Erro Interno do Servidor"
@@ -1023,11 +1389,11 @@
                   "type": "number",
                   "example": 0
                 },
-                "estad0": {
+                "estado": {
                   "type": "string",
                   "example": "Paraná"
                 },
-                "uf": {
+                "UF": {
                   "type": "string",
                   "example": "PR"
                 }
@@ -1083,13 +1449,24 @@
             "type": "string"
           },
           {
-            "name": "body",
+            "name": "json",
             "in": "body",
+            "description": "Dados que podem ser passados para atualizar totalmente uma Nota do Estado na resposta",
+            "required": true,
             "schema": {
               "type": "object",
               "properties": {
-                "id": {
-                  "example": "any"
+                "numeronota": {
+                  "type": "number",
+                  "example": 12345
+                },
+                "estado": {
+                  "type": "string",
+                  "example": "Paraná"
+                },
+                "UF": {
+                  "type": "string",
+                  "example": "PR"
                 }
               }
             }
@@ -1150,7 +1527,47 @@
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucesso!",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "total": {
+                  "type": "number",
+                  "example": 1
+                },
+                "Endereco": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "rua": {
+                        "type": "string",
+                        "example": "NATAL"
+                      },
+                      "cidade": {
+                        "type": "string",
+                        "example": "Pinhalzinho"
+                      },
+                      "cep": {
+                        "type": "string",
+                        "example": "89870-000"
+                      },
+                      "bairro": {
+                        "type": "string",
+                        "example": "CENTRO"
+                      },
+                      "uf": {
+                        "type": "string",
+                        "example": "SC"
+                      }
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
           },
           "500": {
             "description": "Erro Interno do Servidor"
@@ -1244,13 +1661,32 @@
             "type": "string"
           },
           {
-            "name": "body",
+            "name": "json",
             "in": "body",
+            "description": "Dados que podem ser passados para atualizar totalmente um Endereço na resposta",
+            "required": true,
             "schema": {
               "type": "object",
               "properties": {
-                "id": {
-                  "example": "any"
+                "rua": {
+                  "type": "string",
+                  "example": "NATAL"
+                },
+                "cidade": {
+                  "type": "string",
+                  "example": "Pinhalzinho"
+                },
+                "cep": {
+                  "type": "string",
+                  "example": "89870-000"
+                },
+                "bairro": {
+                  "type": "string",
+                  "example": "CENTRO"
+                },
+                "uf": {
+                  "type": "string",
+                  "example": "SC"
                 }
               }
             }
@@ -1311,7 +1747,47 @@
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucesso!",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "total": {
+                  "type": "number",
+                  "example": 1
+                },
+                "Cliente": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "fantasia": {
+                        "type": "string",
+                        "example": "Propretario"
+                      },
+                      "cnpj": {
+                        "type": "string",
+                        "example": "85.071.272/0001-35"
+                      },
+                      "razaosocial": {
+                        "type": "string",
+                        "example": "ProPretario"
+                      },
+                      "idendereco": {
+                        "type": "number",
+                        "example": 2
+                      },
+                      "email": {
+                        "type": "string",
+                        "example": "propretario@gmail.com"
+                      }
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
           },
           "500": {
             "description": "Erro Interno do Servidor"
@@ -1405,13 +1881,32 @@
             "type": "string"
           },
           {
-            "name": "body",
+            "name": "json",
             "in": "body",
+            "description": "Dados que podem ser passados para atualizar totalmente um Cliente na resposta",
+            "required": true,
             "schema": {
               "type": "object",
               "properties": {
-                "id": {
-                  "example": "any"
+                "fantasia": {
+                  "type": "string",
+                  "example": "Propretario"
+                },
+                "cnpj": {
+                  "type": "string",
+                  "example": "85.071.272/0001-35"
+                },
+                "razaosocial": {
+                  "type": "string",
+                  "example": "ProPretario"
+                },
+                "idendereco": {
+                  "type": "number",
+                  "example": 2
+                },
+                "email": {
+                  "type": "string",
+                  "example": "propretario@gmail.com"
                 }
               }
             }
