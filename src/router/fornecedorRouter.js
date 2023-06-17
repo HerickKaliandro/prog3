@@ -61,5 +61,19 @@ module.exports = (app) => {
     app.patch('/fornecedor/:id', fornecedorController.patchfornecedor
                 /* #swagger.tags = ['Fornecedor']
        #swagger.summary = 'Atualiza todo registro de um Fornecedor, de acordo com o id passado por parametro'         
-    */)
+       #swagger.parameters['json'] = {
+        in: 'body',
+        description: 'Dados que podem ser passados para atualizar um Fornecedor na resposta',
+        required: 'true',
+        type: 'json',
+        schema: {
+            idendereco: 1,
+            idcliente: 1,
+            numero: 1,
+            cnpj: "85.071.272/0001-35",
+            email: "VendeMoveis@gmail.com",
+            fantasia: "Vendedor Ambulante",
+        }
+      }
+       */)
 }

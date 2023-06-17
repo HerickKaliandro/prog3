@@ -61,5 +61,19 @@ module.exports = (app) => {
     app.patch('/produto/:id', produtoController.patchproduto
             /* #swagger.tags = ['Produto']
        #swagger.summary = 'Atualiza todo registro de um Produto, de acordo com o id passado por parametro'         
-    */)
+       #swagger.parameters['json'] = {
+        in: 'body',
+        description: 'Dados que podem ser passados para atualizar um Produto na resposta',
+        required: 'true',
+        type: 'json',
+        schema: {
+             "id":1,
+             "descricao":"Cabeceira",
+             "cor":"Verde",
+             "largura":12,
+             "altura": 89,
+             "comprimento":122
+        }
+      }
+       */)
 }

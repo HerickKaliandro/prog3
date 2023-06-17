@@ -58,5 +58,17 @@ module.exports = (app) => {
     app.patch('/usuario/:id', userController.patchusuario
            /* #swagger.tags = ['Usuario']
        #swagger.summary = 'Atualiza todo registro de um Usuario, de acordo com o id passado por parametro'         
-    */)
+       #swagger.parameters['json'] = {
+        in: 'body',
+        description: 'Dados que podem ser passados para atualizar totalmente um Usuario na resposta',
+        required: 'true',
+        type: 'json',
+        schema: {
+            usuario: "Amanda",
+            senha: "Amanda123",
+            sexo: "I",
+            setor: "ADM"
+        }
+        }
+       */)
 }

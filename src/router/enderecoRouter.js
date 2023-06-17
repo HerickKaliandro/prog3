@@ -61,5 +61,18 @@ module.exports = (app) => {
     app.patch('/endereco/:id', enderecoController.patchendereco
         /* #swagger.tags = ['Endereço']
        #swagger.summary = 'Atualiza todo registro de um Endereço, de acordo com o id passado por parametro'         
-    */)
+       #swagger.parameters['json'] = {
+        in: 'body',
+        description: 'Dados que podem ser passados para atualizar totalmente um Endereço na resposta',
+        required: 'true',
+        type: 'json',
+        schema: {
+            rua: "NATAL",
+            cidade: "Pinhalzinho",
+            cep: "89870-000",
+            bairro: "CENTRO",
+            uf: "SC"
+        }
+        }
+       */)
 }   

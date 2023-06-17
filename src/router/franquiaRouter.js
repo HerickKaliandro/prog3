@@ -61,5 +61,19 @@ module.exports = (app) => {
     app.patch('/franquia/:id', franquiaController.patchfranquia
         /* #swagger.tags = ['Franquia']
        #swagger.summary = 'Atualiza todo registro de uma Franquia, de acordo com o id passado por parametro'         
-    */)
+       #swagger.parameters['json'] = {
+        in: 'body',
+        description: 'Dados que podem ser passados para atualizar um Fornecedor na resposta',
+        required: 'true',
+        type: 'json',
+        schema: {
+            idendereco: 1,
+            idcliente: 1,
+            numero: 1,
+            cnpj: "85.071.272/0001-35",
+            email: "cabeceirasdesol@gmail.com",
+            fantasia: "Cabeceiras de Sol",
+        }
+    }
+       */)
 }

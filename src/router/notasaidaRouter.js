@@ -58,5 +58,18 @@ module.exports = (app) => {
     app.patch('/notasaida/:id', notasaidaController.patchnotasaida
             /* #swagger.tags = ['Nota de Saida']
        #swagger.summary = 'Atualiza todo registro de uma Nota de Saida, de acordo com o id passado por parametro'         
-    */)
+       #swagger.parameters['json'] = {
+        in: 'body',
+        description: 'Dados que podem ser passados para atualizar uma Nota de Saida na resposta',
+        required: 'true',
+        type: 'json',
+        schema: {
+            idestadonota: 1,
+            numeronf: "122983765",
+            valortotal: 200,
+            dataemisao: "12.02.2022",
+            idcliente: 1
+        }
+      }
+       */)
 }

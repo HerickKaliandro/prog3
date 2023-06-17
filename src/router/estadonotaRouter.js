@@ -55,5 +55,16 @@ module.exports = (app) => {
     app.patch('/estadonota/:id', estadonotaController.patchestadonota
                 /* #swagger.tags = ['Nota por estado']
        #swagger.summary = 'Atualiza todo registro de uma Nota por estado, de acordo com o id passado por parametro'         
-    */)
+       #swagger.parameters['json'] = {
+        in: 'body',
+        description: 'Dados que podem ser passados para atualizar totalmente uma Nota de Estado na resposta',
+        required: 'true',
+        type: 'json',
+        schema: {
+            numeronota: 12345,
+            estado: "Paraná",
+            UF: "PR"
+        }
+        }
+       */)
 }

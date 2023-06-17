@@ -61,5 +61,18 @@ module.exports = (app) => {
     app.patch('/cliente/:id', clienteController.patchcliente
         /* #swagger.tags = ['Cliente']
        #swagger.summary = 'Atualiza todo registro de um cliente, de acordo com o id passado por parametro'         
-    */)
+       #swagger.parameters['json'] = {
+        in: 'body',
+        description: 'Dados que podem ser passados para atualizar totalmente um Cliente na resposta',
+        required: 'true',
+        type: 'json',
+        schema: {
+            fantasia: "Propretario",
+            cnpj: "85.071.272/0001-35",
+            razaosocial: "ProPretario",
+            idendereco: 2,
+            email: "propretario@gmail.com"
+        }
+        }
+       */)
 }
